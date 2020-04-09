@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace WinForms_Dashboard_State_Changed_event {
     public partial class Form1: Form {
         DashboardState state = new DashboardState();
-        const string path = "../../Dashboards/dashboard1.xml";
+        const string path = @"..\..\Dashboards\dashboard1.xml";
         public Form1() {
             InitializeComponent();
             dashboardViewer.LoadDashboard(path);

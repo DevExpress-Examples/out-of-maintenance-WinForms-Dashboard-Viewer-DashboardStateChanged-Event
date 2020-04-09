@@ -32,8 +32,6 @@
             // 
             this.dashboardViewer.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.dashboardViewer.Appearance.Options.UseBackColor = true;
-            this.dashboardViewer.DashboardSource = new System.Uri("D:\\examples\\WinForms-Dashboard-State-Changed-event\\WinForms-Dashboard-State-Chang" +
-        "ed-event\\Dashboards\\dashboard1.xml", System.UriKind.Absolute);
             this.dashboardViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashboardViewer.Location = new System.Drawing.Point(0, 0);
             this.dashboardViewer.Name = "dashboardViewer";
