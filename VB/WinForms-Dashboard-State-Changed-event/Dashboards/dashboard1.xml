@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <ExtractFileDataSource ComponentName="dashboardExtractDataSource1" Name="Extract Data Source 1">
+      <FileName>D:\examples\WinForms-Dashboard-State-Changed-event\CS\WinForms-Dashboard-State-Changed-event\Data\SalesPersonExtract.dat</FileName>
+      <Parameters />
+      <SavedSchema>
+        <Column>
+          <Name>OrderID</Name>
+          <Type>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Country</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>FirstName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>LastName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>ProductName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>CategoryName</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>OrderDate</Name>
+          <Type>System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>UnitPrice</Name>
+          <Type>System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Quantity</Name>
+          <Type>System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Discount</Name>
+          <Type>System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Extended Price</Name>
+          <Type>System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+        <Column>
+          <Name>Sales Person</Name>
+          <Type>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Type>
+        </Column>
+      </SavedSchema>
+    </ExtractFileDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Sales by Category" DataSource="dashboardExtractDataSource1">
+      <InteractivityOptions MasterFilterMode="Single" IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="CategoryName" Name="Category" DefaultId="DataItem0" />
+        <Measure DataMember="Extended Price" Name="Total Sum" DefaultId="DataItem1" />
+        <Dimension DataMember="ProductName" Name="Product" DefaultId="DataItem2" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="Sales by Product/Country" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Measure DataMember="Extended Price" Name="Total Sum" DefaultId="DataItem0" />
+        <Dimension DataMember="Country" DefaultId="DataItem2" />
+        <Dimension DataMember="ProductName" DefaultId="DataItem1" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="dashboardExtractDataSource1">
+      <DataItems>
+        <Measure DataMember="CategoryName" DefaultId="DataItem0" />
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem2" />
+      </DataItems>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+        <Simple SeriesType="Line">
+          <Value DefaultId="DataItem2" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+    <Card ComponentName="cardDashboardItem1" Name="Total Sum by Country" DataSource="dashboardExtractDataSource1">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Country" DefaultId="DataItem1" />
+        <Measure DataMember="Extended Price" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem0" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate MinWidth="270" MaxWidth="270" Type="Centered">
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue Visible="true" ValueType="ActualValue" DimensionIndex="0" />
+          <BottomSubValue1 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <BottomSubValue2 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutGroup Weight="75.571600481347772">
+        <LayoutGroup Orientation="Vertical" Weight="47.480106100795759">
+          <LayoutItem DashboardItem="gridDashboardItem1" Weight="50" />
+          <LayoutItem DashboardItem="cardDashboardItem1" Weight="50" />
+        </LayoutGroup>
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="52.519893899204241" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="rangeFilterDashboardItem1" Weight="24.428399518652228" />
+    </LayoutGroup>
+  </LayoutTree>
+  <UserData>
+    <Root>
+      <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="rangeFilterDashboardItem1"&gt;&lt;Range&gt;&lt;Selection&gt;&lt;Minimum Type="System.DateTime" Value="2014-12-01T00:00:00.0000000" /&gt;&lt;Maximum Type="System.DateTime" Value="2016-01-01T00:00:00.0000000" /&gt;&lt;/Selection&gt;&lt;/Range&gt;&lt;MasterFilter /&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;Range&gt;&lt;Selection /&gt;&lt;/Range&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.String" Value="Condiments" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
+    </Root>
+  </UserData>
+</Dashboard>
