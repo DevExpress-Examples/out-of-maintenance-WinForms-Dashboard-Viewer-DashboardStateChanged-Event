@@ -19,3 +19,21 @@ The following API is used in this example:
 * [DashboardViewer.DashboardLoaded](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.DashboardLoaded)
 * [CustomProperties.SetValue](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.CustomProperties.SetValue(System.String-System.String))
 * [DashboardViewer.SetInitialDashboardState](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.SetInitialDashboardState)
+
+## See Also
+**WinForms Dashboard Designer:**
+- [How to Set the Initial Dashboard State](https://github.com/DevExpress-Examples/winforms-designer-save-and-apply-dashboard-state)
+
+- [How to Clear Filter Values in a Dashboard State](https://github.com/DevExpress-Examples/How-to-Clear-Filter-Values-in-a-Dashboard-State-)
+
+**WinForms Dashboard Viewer:**
+
+- [How to Save and Restore the Dashboard State](https://github.com/DevExpress-Examples/winforms-dashboard-save-restore-dashboard-state)
+
+- [How to Set the Initial Dashboard State](https://github.com/DevExpress-Examples/winforms-viewer-save-and-apply-dashboard-state)
+
+**WPF Dashboard:**
+
+- [How to Use the DashboardStateChanged Event to Display User Interactions](https://github.com/DevExpress-Examples/wpf-dashboard-viewer-DashboardStateChanged-event)
+
+- [How to Set the Initial Dashboard State](https://github.com/DevExpress-Examples/wpf-dashboard-how-to-set-initial-dashboard-state)
