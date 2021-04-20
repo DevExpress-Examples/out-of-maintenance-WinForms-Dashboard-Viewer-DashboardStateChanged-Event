@@ -2,7 +2,7 @@
 
 * [Form1.cs](./CS/WinForms-Dashboard-State-Changed-event/Form1.cs) (VB: [Form1.vb](./VB/WinForms-Dashboard-State-Changed-event/Form1.vb))
 
-# How to Use the DashboardStateChanged Event to Manage the Dashboard State.
+# How to Use the DashboardStateChanged Event to Manage the Dashboard State
 
 This example demonstrates how to manage the dashboard state to save and restore user interactions.
 
