@@ -20,7 +20,8 @@ The following API is used in this example:
 * [CustomProperties.SetValue](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.CustomProperties.SetValue(System.String-System.String))
 * [DashboardViewer.SetInitialDashboardState](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWin.DashboardViewer.SetInitialDashboardState)
 
-## See Also
+## More Examples
+
 **WinForms Dashboard Designer:**
 - [How to Set the Initial Dashboard State](https://github.com/DevExpress-Examples/winforms-designer-save-and-apply-dashboard-state)
 
