@@ -154,12 +154,7 @@
       <LayoutItem DashboardItem="rangeFilterDashboardItem1" Weight="24.428399518652228" />
     </LayoutGroup>
   </LayoutTree>
-  <UserData>
-    <Root>
-      <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="rangeFilterDashboardItem1"&gt;&lt;Range&gt;&lt;Selection&gt;&lt;Minimum Type="System.DateTime" Value="2014-12-01T00:00:00.0000000" /&gt;&lt;Maximum Type="System.DateTime" Value="2016-01-01T00:00:00.0000000" /&gt;&lt;/Selection&gt;&lt;/Range&gt;&lt;MasterFilter /&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;Range&gt;&lt;Selection /&gt;&lt;/Range&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.String" Value="Condiments" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
-    </Root>
-  </UserData>
   <CustomProperties>
-    <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="rangeFilterDashboardItem1"&gt;&lt;Range&gt;&lt;Selection&gt;&lt;Minimum Type="System.DateTime" Value="2015-05-01T00:00:00.0000000" /&gt;&lt;Maximum Type="System.DateTime" Value="2015-06-01T00:00:00.0000000" /&gt;&lt;/Selection&gt;&lt;/Range&gt;&lt;MasterFilter /&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;Range&gt;&lt;Selection /&gt;&lt;/Range&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.String" Value="Dairy Products" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
+    <DashboardState>&lt;DashboardState&gt;&lt;Items&gt;&lt;Item Name="rangeFilterDashboardItem1"&gt;&lt;Range&gt;&lt;Selection&gt;&lt;Minimum Type="System.DateTime" Value="2015-02-01T00:00:00.0000000" /&gt;&lt;Maximum Type="System.DateTime" Value="2015-09-01T00:00:00.0000000" /&gt;&lt;/Selection&gt;&lt;/Range&gt;&lt;MasterFilter /&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;Item Name="gridDashboardItem1"&gt;&lt;Range&gt;&lt;Selection /&gt;&lt;/Range&gt;&lt;MasterFilter&gt;&lt;Values&gt;&lt;Value Type="System.String" Value="Dairy Products" /&gt;&lt;/Values&gt;&lt;/MasterFilter&gt;&lt;DrillDown /&gt;&lt;/Item&gt;&lt;/Items&gt;&lt;/DashboardState&gt;</DashboardState>
   </CustomProperties>
 </Dashboard>
